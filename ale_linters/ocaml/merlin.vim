@@ -11,7 +11,7 @@ endfunction
 
 call ale#linter#Define('ocaml', {
 \   'name': 'merlin',
-\   'executable': 'ocamlmerlin',
-\   'command': 'true',
-\   'callback': 'ale_linters#ocaml#merlin#Handle',
+\   'lsp': 'stdio',
+\   'executable': 'opam',
+\   'command': 'exec -- ocamlmerlin-lsp',
 \})
